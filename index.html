@@ -8,6 +8,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="108favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="108favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -23,7 +27,7 @@
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
 
             <button data-copy>
-                <span data-copyMsg></span>
+                <span data-copyMsg class="tooltip"></span>
                 <img src="./assets/copy.svg" alt="copy" width="23" height="23">
             </button>
 
@@ -42,22 +46,22 @@
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
 
             <!-- checkboxes-->
-            <div>
+            <div class="check">
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Includes Uppercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="lowercase">
                 <label for="lowercase">Includes Lowercase letters</label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="numbers">
                 <label for="numbers">Includes Numbers </label>
             </div>
 
-            <div>
+            <div class="check">
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Includes Symbols </label>
             </div>
@@ -65,7 +69,7 @@
             <!-- strength section-->
             <div class="strength-container">
                 <p>Strength</p>
-                <div data-indicator></div>
+                <div class="indicator" data-indicator></div>
             </div>
 
             <!-- generate password-->
